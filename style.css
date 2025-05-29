@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+    margin: 0 0;
+}
+:root {
+    /* === Primary Dark Theme === */
+    --color-background: #020617;
+    --color-surface: #0f172a;
+    --color-surface-highlight: #1e293b;
+  
+    /* === Core Brand Colors === */
+    --color-primary: #0c247c;        /* Deep royal blue */
+    --color-primary-light: #1e3a8a;
+    --color-primary-dark: #08164a;
+  
+    /* === Accent Green (Buttons / CTAs) === */
+    --color-accent: #22c55e;         /* Emerald green */
+    --color-accent-hover: #16a34a;
+    --color-accent-glow: rgba(34, 197, 94, 0.3);
+  
+    /* === Text === */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #94a3b8;
+    --color-text-accent: #67e8f9;    /* Teal-blue tint for keywords or highlights */
+  
+    /* === UI States === */
+    --color-border: #334155;
+    --color-input-bg: #1e293b;
+    --color-input-border: #475569;
+  
+    /* === Central Hero Gradient (background glow) === */
+    --gradient-center: radial-gradient(
+      circle at center,
+      rgba(34, 197, 94, 0.2) 0%,
+      rgba(12, 36, 124, 0.3) 40%,
+      rgba(2, 6, 23, 1) 80%
+    );
+  
+    /* === Shadows / Glow Effects === */
+    --shadow-glow: 0 0 20px rgba(34, 197, 94, 0.4);
+    --shadow-deep: 0 10px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 15px;
+    color: var(--color-white);
+    align-items: center;
+  }
+
+  header img {
+    width: 20px;
+  }
+
+  .header__links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .primary_button {
+    background-color: var(--color-accent);
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: var(--color-text-primary);
+  }
+
+  .primary_button:hover {
+    background-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-glow);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  button {
+    font-weight: 200;
+    letter-spacing: 3px;
+    border: 1px solid var(--color-border);
+  }
+
+  .hero { 
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    background-image: var(--gradient-center);
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .header__icontext {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img[src="/Assets/mdi_bullhorn.svg"] {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(29deg) brightness(105%) contrast(101%);
+  }
+
+  .gradient__text {
+    background-image: linear-gradient(
+        90deg,
+        #67e8f9 0%,     /* bright cyan/teal */
+        #3b82f6 35%,    /* blue */
+        #8b5cf6 70%,    /* violet */
+        #67e8f9 100%    /* wraparound glow */
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+  }
+
+  .hero__search {
+    padding-top: 60px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid var(--color-input-border);
+    background-color: var(--color-surface-highlight);
+    border-radius: 15px;
+    justify-items: center;
+    padding-left: 15px;
+    margin-top: 60px;
+    padding-top: 0px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type="search"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 50px;
+    padding-left: 15px;
+    width: 100%;
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+  
+img[src="Assets/gravity-ui_logo-docker.svg"] {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(29deg) brightness(105%) contrast(101%);
+}
+
+.container {
+    margin-top: 50px;
+    padding: 150px auto;
+}
+
+.herop {
+    margin-top: 50px;
+}
